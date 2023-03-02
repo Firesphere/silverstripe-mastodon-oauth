@@ -1,0 +1,6 @@
+SilverStripe\Security\Member:
+  extensions:
+    - Firesphere\OAuth2Mastodon\Extension\MemberExtension
+Bigfork\SilverStripeOAuth\Client\Form\LoginForm:
+  extensions:
+    - Firesphere\OAuth2Mastodon\Extension\LoginFormExtension

@@ -1,0 +1,16 @@
+{
+  "name": "firesphere/oauth2-mastodon",
+  "description": "Silverstripe OAuth2 for Mastodon",
+  "minimum-stability": "stable",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "firesphere",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "bigfork/silverstripe-oauth-login": "^2.2.0",
+    "lrf141/oauth2-mastodon": "^1.0.0"
+  }
+}
