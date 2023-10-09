@@ -8,6 +8,7 @@ use SilverStripe\ORM\DataExtension;
 /**
  * Class \Firesphere\OAuth2Mastodon\Extension\MemberExtension
  *
+ * @property Member|MemberExtension $owner
  * @property int $MastodonInstanceID
  * @method InstanceCredential MastodonInstance()
  */

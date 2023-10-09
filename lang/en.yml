@@ -1,0 +1,7 @@
+en:
+  Firesphere\OAuth2Mastodon\Model\InstanceCredential:
+    PLURALNAME: 'Instance Credentials'
+    PLURALS:
+      one: 'An Instance Credential'
+      other: '{count} Instance Credentials'
+    SINGULARNAME: 'Instance Credential'

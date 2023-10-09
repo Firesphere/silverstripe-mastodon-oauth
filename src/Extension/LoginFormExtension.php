@@ -17,6 +17,7 @@ use SilverStripe\View\Requirements;
 /**
  * Class \Firesphere\OAuth2Mastodon\Extension\LoginFormExtension
  *
+ * @property LoginForm|LoginFormExtension $owner
  */
 class LoginFormExtension extends Extension
 {
@@ -30,6 +31,7 @@ class LoginFormExtension extends Extension
         $total = count($providers);
         $push = 0;
         $offset = floor(12/$total);
+        // What the fuck am I doing here?
         foreach ($providers as $provider => $config) {
             if ($provider === 'Mastodon') {
                 $instanceList = InstanceCredential::get()->map('ID', 'InstanceUrl')->toArray();
@@ -49,8 +51,13 @@ class LoginFormExtension extends Extension
         }
     }
 
-
-
+    /**
+     * @param string $name
+     * @return void
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     * @throws \SilverStripe\ORM\ValidationException
+     */
     public function onBeforeHandleProvider($name)
     {
         if ($name === 'Mastodon') {
